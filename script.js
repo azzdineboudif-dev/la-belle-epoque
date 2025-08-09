@@ -1,0 +1,2 @@
+const navToggle=document.querySelector('.nav-toggle');const nav=document.querySelector('#site-nav');if(navToggle&&nav){navToggle.addEventListener('click',()=>{const o='none'!==getComputedStyle(nav).display;nav.style.display=o?'none':'flex',navToggle.setAttribute('aria-expanded',String(!o))})}
+const y=document.getElementById('year');if(y)y.textContent=(new Date).getFullYear();

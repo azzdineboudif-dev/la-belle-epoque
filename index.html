@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>La Belle Époque — Boulangerie & Pâtisserie</title>
+  <meta name="description" content="Boulangerie & pâtisserie artisanales à Saint-Denis. Pains au levain, viennoiseries au beurre AOP, gâteaux de saison.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#accueil" aria-label="Accueil">
+      <img src="assets/logo.svg" alt="" width="32" height="32">
+      <span>La <strong>Belle Époque</strong></span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+      <a href="#produits">Produits</a>
+      <a href="#savoirfaire">Savoir-faire</a>
+      <a href="#infos">Infos</a>
+      <a class="btn btn-primary" href="#contact">Commander</a>
+    </nav>
+  </div>
+</header>
 
+<main id="accueil">
+  <!-- HERO -->
+  <section class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1 class="display">Boulangerie & Pâtisserie<br><span class="accent">La Belle Époque</span></h1>
+        <p class="lead">Levain, beurre AOP, farines sélectionnées. Une maison de goût à Saint-Denis.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#contact">Commander / Réserver</a>
+          <a class="btn btn-ghost" href="#produits">Découvrir nos signatures</a>
+        </div>
+        <ul class="usp" role="list">
+          <li>Pains au levain</li>
+          <li>Viennoiseries pur beurre</li>
+          <li>Pâtisseries de saison</li>
+        </ul>
+      </div>
+      <figure class="hero-visual photo framed">
+        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1200&auto=format&fit=crop" alt="Vitrine de pâtisseries">
+      </figure>
+    </div>
+    <div class="hero-bg"></div>
+  </section>
+
+  <!-- PRODUITS -->
+  <section id="produits" class="section">
+    <div class="container">
+      <h2 class="section-title">Nos signatures</h2>
+      <div class="cards">
+        <article class="card appear">
+          <img class="card-img" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?q=80&w=1200&auto=format&fit=crop" alt="Pains au levain">
+          <div class="card-body">
+            <h3>Pains au levain</h3>
+            <p>Fermentation lente, croûte caramélisée, mie alvéolée.</p>
+          </div>
+        </article>
+        <article class="card appear">
+          <img class="card-img" src="https://images.unsplash.com/photo-1475855581690-80accde3ae2b?q=80&w=1200&auto=format&fit=crop" alt="Viennoiseries">
+          <div class="card-body">
+            <h3>Viennoiseries pur beurre</h3>
+            <p>Feuilletage patient et généreux — croissants & pains au chocolat.</p>
+          </div>
+        </article>
+        <article class="card appear">
+          <img class="card-img" src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=1200&auto=format&fit=crop" alt="Pâtisseries fines">
+          <div class="card-body">
+            <h3>Pâtisseries fines</h3>
+            <p>Crèmes légères, fruits de saison, équilibre des saveurs.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAVOIR-FAIRE -->
+  <section id="savoirfaire" class="section alt">
+    <div class="container about">
+      <div>
+        <h2 class="section-title">Notre maison</h2>
+        <p>Inspirée de l’élégance de la <em>Belle Époque</em>, notre boulangerie marie tradition et modernité. Farines locales, levain maison, et respect des temps de repos.</p>
+        <ul class="badges" role="list">
+          <li>Artisanat quotidien</li>
+          <li>Produits de saison</li>
+          <li>Recettes maison</li>
+        </ul>
+      </div>
+      <figure class="photo framed appear">
+        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?q=80&w=1200&auto=format&fit=crop" alt="Comptoir de boulangerie">
+      </figure>
+    </div>
+  </section>
+
+  <!-- INFOS PRATIQUES -->
+  <section id="infos" class="section">
+    <div class="container contact-grid">
+      <div class="contact-card">
+        <h2 class="section-title">Infos pratiques</h2>
+        <p><strong>Adresse</strong><br>2 Rue des Rougemonts, 93380 Saint-Denis</p>
+        <p><strong>Téléphone</strong><br><a href="tel:+33664377858">06 64 37 78 58</a></p>
+        <p><strong>Horaires</strong><br>Lun–Sam 7:00–19:30 · Dim 7:00–13:00</p>
+        <div class="cta-inline">
+          <a class="btn btn-primary" href="#contact">Nous écrire</a>
+        </div>
+      </div>
+      <iframe title="Carte — La Belle Époque, Saint-Denis" loading="lazy" class="map"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=2.35,48.93,2.38,48.96&layer=mapnik&marker=48.945,2.365"></iframe>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Un message ?</h2>
+      <form id="contact-form" class="form">
+        <div class="grid">
+          <label>Nom* <input name="nom" required autocomplete="name"/></label>
+          <label>E-mail* <input name="email" type="email" required autocomplete="email"/></label>
+          <label>Téléphone <input name="tel" inputmode="tel" autocomplete="tel"/></label>
+        </div>
+        <label>Message <textarea name="message" rows="4" placeholder="Votre demande (commande, devis, info)…"></textarea></label>
+        <div class="form-actions">
+          <button class="btn btn-primary" type="submit">Envoyer</button>
+          <span id="form-status" class="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="#accueil" aria-label="Accueil">
+      <img src="assets/logo.svg" alt="" width="24" height="24">
+      <span>La <strong>Belle Époque</strong></span>
+    </a>
+    <nav class="footer-nav" aria-label="Liens utilitaires">
+      <a href="#produits">Produits</a>
+      <a href="#savoirfaire">Savoir-faire</a>
+      <a href="#infos">Infos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="copyright">© <span id="year"></span> La Belle Époque — Tous droits réservés.</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
