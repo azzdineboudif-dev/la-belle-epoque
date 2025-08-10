@@ -1,5 +1,5 @@
 :root {
-  --brand: #ffffff; /* blanc pur */
+  --brand: #F9D9D7; /* rose doux */
   --sage: #80856D;
   --paper: #ffffff;
   --ink: #1d1b1b;
@@ -25,18 +25,18 @@ a {
   text-decoration: none;
 }
 
-/* Fond blanc sur toute la page */
+/* Dégradé rose sur toute la page */
 body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--ink);
-  background: #ffffff !important;
+  background: linear-gradient(to bottom, #F9D9D7 0%, #ffffff 100%) !important;
   line-height: 1.6;
   min-height: 100vh;
 }
 
 /* Supprimer tout fond spécifique */
 section, footer, header, .card, .btn, .nav-toggle {
-  background: #ffffff !important;
+  background: transparent !important;
 }
 
 /* Layout & typo */
@@ -81,7 +81,7 @@ section, footer, header, .card, .btn, .nav-toggle {
   position: sticky;
   top: 0;
   z-index: 30;
-  background: #ffffff !important;
+  background: transparent !important;
   border-bottom: 1px solid var(--stroke);
   padding: 12px 0;
 }
@@ -119,6 +119,7 @@ section, footer, header, .card, .btn, .nav-toggle {
   box-shadow: var(--shadow);
   padding: 1rem;
   min-height: 200px;
+  background: #ffffff !important;
 }
 
 /* Responsive */
