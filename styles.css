@@ -23,14 +23,6 @@ body{
 .container{width:min(1100px,92%);margin-inline:auto}
 .section{padding:clamp(32px,5vw,64px) 0}
 
-/* Bannière */
-.banner {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
 /* Titres */
 .display,
 .section-title,
@@ -78,6 +70,17 @@ h1:hover, h2:hover, h3:hover {
 a:hover,
 .site-nav a:hover {
   color: #9E9F8D;
+}
+
+/* Hover vert + texte blanc pour Accueil, Produits, Contact */
+.site-nav a{
+  padding:0.5rem 0.8rem;
+  border-radius:8px;
+  transition: all 0.3s ease;
+}
+.site-nav a:hover{
+  background:var(--ink); /* fond vert clair */
+  color:#fff; /* texte blanc */
 }
 
 /* Boutons */
