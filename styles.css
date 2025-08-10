@@ -34,8 +34,8 @@ body {
   min-height: 100vh;
 }
 
-/* Supprimer tout fond spécifique */
-section, footer, header, .card, .btn, .nav-toggle {
+/* Supprimer tout fond ajouté par d'autres sections */
+section, footer, header, .card, .btn, .nav-toggle, .infos-pratiques, .contact {
   background: transparent !important;
 }
 
