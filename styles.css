@@ -24,22 +24,24 @@ body{
 .section{padding:clamp(32px,5vw,64px) 0}
 
 /* Titres */
-.display{
+.display,
+.section-title,
+h1, h2, h3 {
   font-family:"Playfair Display",serif;
   font-weight:700;
-  font-size:clamp(2rem,1.2rem + 3vw,3.2rem);
-  line-height:1.15;
-  margin:0 0 .5rem;
   color:var(--ink);
+  transition: color 0.3s ease;
 }
-.section-title{
-  font-family:"Playfair Display",serif;
-  font-weight:700;
-  font-size:clamp(1.4rem,1rem + 1.4vw,2rem);
-  margin:0 0 .75rem;
-  color:var(--ink);
-}
+.display{font-size:clamp(2rem,1.2rem + 3vw,3.2rem);line-height:1.15;margin:0 0 .5rem;}
+.section-title{font-size:clamp(1.4rem,1rem + 1.4vw,2rem);margin:0 0 .75rem;}
 .lead{color:var(--muted);margin:0 0 1rem}
+
+/* Effet hover titres */
+.display:hover,
+.section-title:hover,
+h1:hover, h2:hover, h3:hover {
+  color:#7f806f; /* Vert plus foncé au survol */
+}
 
 /* Header */
 .site-header{
