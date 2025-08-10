@@ -25,11 +25,11 @@ a {
   text-decoration: none;
 }
 
-/* Applique le rose sur tout l’arrière-plan */
+/* Dégradé rose vers blanc sur toute la page */
 body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--ink);
-  background: var(--brand);
+  background: linear-gradient(to bottom, var(--brand) 0%, #ffffff 100%);
   line-height: 1.6;
 }
 
