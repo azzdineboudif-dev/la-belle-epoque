@@ -133,3 +133,16 @@ section, footer, header, .card, .btn, .nav-toggle, .infos-pratiques, .contact {
     grid-template-columns: 1fr;
   }
 }
+/* --- Footer: totalement neutre --- */
+.site-footer{
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 16px 0;
+}
+.footer-inner{
+  background: transparent !important;
+}
+.footer-nav a{
+  background: transparent !important;
+}
