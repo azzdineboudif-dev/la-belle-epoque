@@ -64,11 +64,26 @@ h1:hover, h2:hover, h3:hover {
   display:none;border:1px solid var(--stroke);background:#fff;
   padding:.45rem .65rem;border-radius:10px;cursor:pointer
 }
-.site-nav{display:flex;gap:1rem;align-items:center;color:var(--ink)}
+
+/* Navigation */
+.site-nav{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+}
+.site-nav a{
+  padding:.5rem .9rem;
+  border-radius: var(--radius);
+  color: var(--ink);
+  transition: all 0.3s ease;
+}
+.site-nav a:hover{
+  background-color: var(--ink);
+  color: #fff;
+}
 
 /* Liens & boutons */
-a:hover,
-.site-nav a:hover {
+a:hover{
   color: #9E9F8D;
 }
 
