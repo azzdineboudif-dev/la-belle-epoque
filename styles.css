@@ -23,6 +23,14 @@ body{
 .container{width:min(1100px,92%);margin-inline:auto}
 .section{padding:clamp(32px,5vw,64px) 0}
 
+/* Bannière */
+.banner img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid var(--stroke);
+}
+
 /* Titres */
 .display,
 .section-title,
@@ -79,8 +87,8 @@ a:hover,
   transition: all 0.3s ease;
 }
 .site-nav a:hover{
-  background:var(--ink); /* fond vert clair */
-  color:#fff; /* texte blanc */
+  background:var(--ink);
+  color:#fff;
 }
 
 /* Boutons */
@@ -96,8 +104,8 @@ a:hover,
   cursor:pointer;
 }
 .btn:hover{
-  background:var(--ink);   /* Fond vert clair */
-  color:#fff;              /* Texte blanc */
+  background:var(--ink);
+  color:#fff;
 }
 
 /* Puces */
@@ -117,21 +125,19 @@ a:hover,
   padding:1rem;
   color:var(--ink);
   transition: all 0.3s ease;
-  text-decoration:none; /* enlever soulignement pour lien */
+  text-decoration:none;
 }
 .card h3{
   margin:.25rem 0 .4rem;
   font-family:"Playfair Display",serif;
   color:var(--ink);
 }
-
-/* Effet hover pour les cartes */
 .card:hover{
-  background:var(--ink); /* fond vert clair */
-  color:#fff; /* texte blanc */
+  background:var(--ink);
+  color:#fff;
 }
 .card:hover h3{
-  color:#fff; /* titres en blanc au survol */
+  color:#fff;
 }
 
 /* Formulaire */
