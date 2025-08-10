@@ -1,78 +1,174 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Belle Époque</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Belle Époque - Boulangerie & Pâtisserie</title>
+
+  <!-- Feuille existante (on ne la touche pas) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- OVERRIDES DE COULEURS UNIQUEMENT -->
+  <style>
+    /* Fond rose + texte vert partout */
+    html, body { background: #f9d9d7 !important; }
+    body { color: #c5c5a9 !important; }
+
+    /* Titres, liens, menus */
+    h1, h2, h3, h4, h5, h6 { color: #c5c5a9 !important; }
+    a { color: #c5c5a9 !important; }
+    a:hover { text-decoration: underline; }
+
+    /* Header neutre (garde la bordure si elle existe dans styles.css) */
+    .site-header, .header-inner, .site-nav { background: transparent !important; }
+
+    /* Boutons dans la palette */
+    .btn, button {
+      border: 1px solid #c5c5a9 !important;
+      color: #c5c5a9 !important;
+      background: transparent !important;
+    }
+    .btn:hover, button:hover {
+      background: #c5c5a9 !important;
+      color: #f9d9d7 !important;
+    }
+
+    /* Cartes : restent blanches, texte vert */
+    .card {
+      background: #ffffff !important;
+      color: #80856D !important; /* lisibilité un peu meilleure à l’intérieur */
+    }
+    .card h3 { color: #80856D !important; }
+
+    /* Formulaire (bords et focus) */
+    input, textarea {
+      color: #80856D !important;
+      border-color: #c5c5a9 !important;
+      background: #fff !important;
+    }
+    input:focus, textarea:focus {
+      outline: 2px solid #c5c5a9 !important;
+    }
+
+    /* Footer neutre, texte vert */
+    .site-footer { background: transparent !important; }
+    .footer-nav a { color: #c5c5a9 !important; }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <h1>La Belle Époque</h1>
-      <p>Boulangerie & Pâtisserie artisanale — Saint-Denis</p>
-      <nav>
-        <a href="#accueil">Accueil</a>
+
+  <!-- En-tête -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">La Belle Époque</div>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">☰</button>
+      <nav id="site-nav" class="site-nav" role="navigation" aria-label="Navigation principale">
+        <a href="#top">Accueil</a>
         <a href="#produits">Produits</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Section présentation -->
-  <section id="accueil" class="section">
-    <button class="btn">Nous contacter</button>
-    <button class="btn">Voir nos spécialités</button>
-    <ul>
-      <li>Douleurs au levain</li>
-      <li>Viennoiseries pur beurre</li>
-      <li>Pâtisseries de saison</li>
-    </ul>
-  </section>
+  <main id="top" class="container">
+    <!-- Hero -->
+    <section aria-label="Présentation" class="section">
+      <h1 class="display">La Belle Époque</h1>
+      <p class="lead">Boulangerie & Pâtisserie artisanale — Saint-Denis</p>
 
-  <!-- Section produits -->
-  <section id="produits" class="section">
-    <h2>Nos spécialités</h2>
-    <div class="card">
-      <h3>Pain artisanal</h3>
-      <p>Cuit au four à bois avec des farines locales.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Nous contacter</a>
+        <a class="btn btn-ghost" href="#produits">Voir nos spécialités</a>
+      </div>
+
+      <ul class="usp">
+        <li>Douleurs au levain</li>
+        <li>Viennoiseries pur beurre</li>
+        <li>Pâtisseries de saison</li>
+      </ul>
+    </section>
+
+    <!-- Produits -->
+    <section id="produits" class="section">
+      <h2 class="section-title">Nos spécialités</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Pain artisanal</h3>
+          <p>Cuit au four à bois avec des farines locales.</p>
+        </article>
+
+        <article class="card">
+          <h3>Viennoiseries</h3>
+          <p>Pur beurre, dorées à souhait, croustillantes et moelleuses.</p>
+        </article>
+
+        <article class="card">
+          <h3>Pâtisseries fines</h3>
+          <p>Créations gourmandes et raffinées pour toutes les occasions.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Infos pratiques -->
+    <section class="section">
+      <h2 class="section-title">Infos pratiques</h2>
+
+      <p><strong>Adresse :</strong> 2 Rue des Rougemonts, 93380 Saint-Denis</p>
+      <p><strong>Téléphone :</strong> 06 64 37 78 58</p>
+
+      <p><strong>Horaires :</strong></p>
+      <ul>
+        <li>Lun – Ven : 7h – 19h</li>
+        <li>Samedi : 7h – 18h</li>
+        <li>Dimanche : 7h – 13h</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Formulaire de contact</h2>
+
+      <form class="form" autocomplete="on">
+        <div class="grid">
+          <label>Nom
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Téléphone
+            <input type="tel" name="phone">
+          </label>
+        </div>
+
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <span class="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> La Belle Époque — Tous droits réservés</small>
+      <nav class="footer-nav" aria-label="Pied de page">
+        <a href="#top">Accueil</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
-    <div class="card">
-      <h3>Viennoiseries</h3>
-      <p>Pur beurre, dorées à souhait, croustillantes et moelleuses.</p>
-    </div>
-    <div class="card">
-      <h3>Pâtisseries fines</h3>
-      <p>Créations gourmandes et raffinées pour toutes les occasions.</p>
-    </div>
-  </section>
-
-  <!-- Section contact -->
-  <section id="contact" class="section">
-    <h2>Infos pratiques</h2>
-    <p><strong>Adresse :</strong> 2 Rue des Rougemonts, 93380 Saint-Denis</p>
-    <p><strong>Téléphone :</strong> 06 64 37 78 58</p>
-    <p><strong>Horaires :</strong></p>
-    <ul>
-      <li>Lun – Ven : 7h – 19h</li>
-      <li>Samedi : 7h – 18h</li>
-      <li>Dimanche : 7h – 13h</li>
-    </ul>
-
-    <h2>Formulaire de contact</h2>
-    <form>
-      <label>Nom <input type="text" name="nom"></label>
-      <label>Email <input type="email" name="email"></label>
-      <label>Téléphone <input type="tel" name="telephone"></label>
-      <label>Message <textarea name="message"></textarea></label>
-      <button type="submit" class="btn">Envoyer</button>
-    </form>
-  </section>
-
-  <!-- Footer -->
-  <footer class="section">
-    <p>© 2025 La Belle Époque — Tous droits réservés</p>
   </footer>
+
+  <!-- On garde ton JS existant tel quel -->
+  <script src="script.js"></script>
 </body>
 </html>
