@@ -23,6 +23,15 @@ body{
 .container{width:min(1100px,92%);margin-inline:auto}
 .section{padding:clamp(32px,5vw,64px) 0}
 
+/* Bannière */
+.banner{
+  width: 100%;
+  height: 400px; /* hauteur de la bannière */
+  background-image: url("assets/croissant-banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
 /* Titres */
 .display,
 .section-title,
