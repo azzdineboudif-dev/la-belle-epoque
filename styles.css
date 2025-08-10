@@ -44,26 +44,34 @@ h1:hover, h2:hover, h3:hover {
 }
 
 /* Bannière */
-.banner {
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-}
 .banner img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
 }
 
 /* Header */
 .site-header{
-  position:sticky;top:0;z-index:40;
-  background:var(--paper);
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:40;
+  transition: background 0.3s ease;
+}
+.site-header.transparent {
+  background: rgba(255,255,255,0.3);
+  border-bottom: none;
+}
+.site-header:not(.transparent) {
+  background: var(--paper);
   border-bottom:1px solid var(--stroke);
 }
 .header-inner{
-  display:flex;align-items:center;justify-content:space-between;
-  padding:.8rem 0;gap:1rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:.8rem 0;
+  gap:1rem;
   color:var(--ink);
 }
 .brand{
@@ -73,8 +81,12 @@ h1:hover, h2:hover, h3:hover {
   color:var(--ink);
 }
 .nav-toggle{
-  display:none;border:1px solid var(--stroke);background:#fff;
-  padding:.45rem .65rem;border-radius:10px;cursor:pointer
+  display:none;
+  border:1px solid var(--stroke);
+  background:#fff;
+  padding:.45rem .65rem;
+  border-radius:10px;
+  cursor:pointer;
 }
 .site-nav{display:flex;gap:1rem;align-items:center;color:var(--ink)}
 
@@ -142,8 +154,13 @@ a:hover,
 .form .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 label{display:flex;flex-direction:column;gap:.35rem;font-weight:600;color:var(--ink)}
 input,textarea{
-  appearance:none;border:1px solid var(--stroke);background:#fff;color:var(--ink);
-  border-radius:12px;padding:.75rem;font:inherit;
+  appearance:none;
+  border:1px solid var(--stroke);
+  background:#fff;
+  color:var(--ink);
+  border-radius:12px;
+  padding:.75rem;
+  font:inherit;
   transition: all 0.3s ease;
 }
 input:focus,textarea:focus{outline:2px solid #9E9F8D}
@@ -160,8 +177,15 @@ input:focus,textarea:focus{outline:2px solid #9E9F8D}
 }
 @media (max-width:640px){
   .site-nav{
-    display:none;position:absolute;right:4%;top:64px;flex-direction:column;background:#fff;
-    border:1px solid var(--stroke);padding:12px;border-radius:12px
+    display:none;
+    position:absolute;
+    right:4%;
+    top:64px;
+    flex-direction:column;
+    background:#fff;
+    border:1px solid var(--stroke);
+    padding:12px;
+    border-radius:12px
   }
   .site-nav.open{display:flex}
   .nav-toggle{display:block}
