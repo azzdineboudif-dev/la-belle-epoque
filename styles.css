@@ -23,12 +23,22 @@ body{
 .container{width:min(1100px,92%);margin-inline:auto}
 .section{padding:clamp(32px,5vw,64px) 0}
 
-/* Bannière */
-.hero-image {
-  width: 100%;
-  height: 300px; /* Hauteur fixe */
-  object-fit: cover;
-  display: block;
+/* ===== Bannière (parallax léger) ===== */
+.hero{
+  width:100%;
+  height:420px;                 /* un peu plus grande que 300px */
+  background-image:url("assets/croissant-banner.jpg");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;  /* effet glissant sur scroll */
+}
+
+/* iOS/Android : désactiver l’attachement fixe (meilleure compatibilité) */
+@media (max-width: 980px){
+  .hero{
+    height:320px;
+    background-attachment:scroll;
+  }
 }
 
 /* Titres */
@@ -47,9 +57,7 @@ h1, h2, h3 {
 /* Effet hover titres */
 .display:hover,
 .section-title:hover,
-h1:hover, h2:hover, h3:hover {
-  color:#7f806f;
-}
+h1:hover, h2:hover, h3:hover { color:#7f806f; }
 
 /* Header */
 .site-header{
@@ -59,84 +67,38 @@ h1:hover, h2:hover, h3:hover {
 }
 .header-inner{
   display:flex;align-items:center;justify-content:space-between;
-  padding:.8rem 0;gap:1rem;
-  color:var(--ink);
+  padding:.8rem 0;gap:1rem;color:var(--ink);
 }
-.brand{
-  font-family:"Playfair Display",serif;
-  font-weight:700;
-  font-size:1.25rem;
-  color:var(--ink);
-}
-.nav-toggle{
-  display:none;border:1px solid var(--stroke);background:#fff;
-  padding:.45rem .65rem;border-radius:10px;cursor:pointer
-}
+.brand{font-family:"Playfair Display",serif;font-weight:700;font-size:1.25rem;color:var(--ink)}
+.nav-toggle{display:none;border:1px solid var(--stroke);background:#fff;padding:.45rem .65rem;border-radius:10px;cursor:pointer}
 .site-nav{display:flex;gap:1rem;align-items:center;color:var(--ink)}
 
 /* Liens & boutons */
-a:hover,
-.site-nav a:hover {
-  color: #9E9F8D;
-}
-.site-nav a{
-  padding:0.5rem 0.8rem;
-  border-radius:8px;
-  transition: all 0.3s ease;
-}
-.site-nav a:hover{
-  background:var(--ink);
-  color:#fff;
-}
+a:hover, .site-nav a:hover { color:#9E9F8D; }
+.site-nav a{padding:0.5rem 0.8rem;border-radius:8px;transition:all .3s ease}
+.site-nav a:hover{background:var(--ink);color:#fff}
 
 /* Boutons */
 .btn{
-  display:inline-block;
-  padding:.7rem 1rem;
-  border:1px solid var(--ink);
-  border-radius:12px;
-  background:#fff;
-  font-weight:600;
-  color:var(--ink);
-  transition: all 0.3s ease;
-  cursor:pointer;
+  display:inline-block;padding:.7rem 1rem;border:1px solid var(--ink);
+  border-radius:12px;background:#fff;font-weight:600;color:var(--ink);
+  transition:all .3s ease;cursor:pointer
 }
-.btn:hover{
-  background:var(--ink);
-  color:#fff;
-}
+.btn:hover{background:var(--ink);color:#fff}
 
 /* Puces */
 .usp{margin:0;padding-left:1.2rem;color:var(--ink)}
 .usp li{margin:.25rem 0;color:var(--ink)}
 
 /* Cartes */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px
-}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .card{
-  background:#fff;
-  border:1px solid var(--stroke);
-  border-radius:var(--radius);
-  padding:1rem;
-  color:var(--ink);
-  transition: all 0.3s ease;
-  text-decoration:none;
+  background:#fff;border:1px solid var(--stroke);border-radius:var(--radius);
+  padding:1rem;color:var(--ink);transition:all .3s ease;text-decoration:none
 }
-.card h3{
-  margin:.25rem 0 .4rem;
-  font-family:"Playfair Display",serif;
-  color:var(--ink);
-}
-.card:hover{
-  background:var(--ink);
-  color:#fff;
-}
-.card:hover h3{
-  color:#fff;
-}
+.card h3{margin:.25rem 0 .4rem;font-family:"Playfair Display",serif;color:var(--ink)}
+.card:hover{background:var(--ink);color:#fff}
+.card:hover h3{color:#fff}
 
 /* Formulaire */
 .form{display:flex;flex-direction:column;gap:1rem;margin-top:.5rem;color:var(--ink)}
@@ -144,8 +106,7 @@ a:hover,
 label{display:flex;flex-direction:column;gap:.35rem;font-weight:600;color:var(--ink)}
 input,textarea{
   appearance:none;border:1px solid var(--stroke);background:#fff;color:var(--ink);
-  border-radius:12px;padding:.75rem;font:inherit;
-  transition: all 0.3s ease;
+  border-radius:12px;padding:.75rem;font:inherit;transition:all .3s ease
 }
 input:focus,textarea:focus{outline:2px solid #9E9F8D}
 
