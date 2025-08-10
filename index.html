@@ -5,57 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Belle Époque - Boulangerie & Pâtisserie</title>
 
-  <!-- Feuille existante (on ne la touche pas) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
-
-  <!-- OVERRIDES DE COULEURS UNIQUEMENT -->
-  <style>
-    /* Fond rose + texte vert partout */
-    html, body { background: #f9d9d7 !important; }
-    body { color: #c5c5a9 !important; }
-
-    /* Titres, liens, menus */
-    h1, h2, h3, h4, h5, h6 { color: #c5c5a9 !important; }
-    a { color: #c5c5a9 !important; }
-    a:hover { text-decoration: underline; }
-
-    /* Header neutre (garde la bordure si elle existe dans styles.css) */
-    .site-header, .header-inner, .site-nav { background: transparent !important; }
-
-    /* Boutons dans la palette */
-    .btn, button {
-      border: 1px solid #c5c5a9 !important;
-      color: #c5c5a9 !important;
-      background: transparent !important;
-    }
-    .btn:hover, button:hover {
-      background: #c5c5a9 !important;
-      color: #f9d9d7 !important;
-    }
-
-    /* Cartes : restent blanches, texte vert */
-    .card {
-      background: #ffffff !important;
-      color: #80856D !important; /* lisibilité un peu meilleure à l’intérieur */
-    }
-    .card h3 { color: #80856D !important; }
-
-    /* Formulaire (bords et focus) */
-    input, textarea {
-      color: #80856D !important;
-      border-color: #c5c5a9 !important;
-      background: #fff !important;
-    }
-    input:focus, textarea:focus {
-      outline: 2px solid #c5c5a9 !important;
-    }
-
-    /* Footer neutre, texte vert */
-    .site-footer { background: transparent !important; }
-    .footer-nav a { color: #c5c5a9 !important; }
-  </style>
 </head>
 <body>
 
@@ -168,7 +121,6 @@
     </div>
   </footer>
 
-  <!-- On garde ton JS existant tel quel -->
   <script src="script.js"></script>
 </body>
 </html>
