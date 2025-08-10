@@ -5,12 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Belle Époque — Boulangerie & Pâtisserie</title>
   <meta name="description" content="Boulangerie & pâtisserie artisanales à Saint-Denis. Pains au levain, viennoiseries dorées, pâtisseries fines." />
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-
-  <!-- IMPORTANT: feuille de style avec cache-buster -->
-  <link rel="stylesheet" href="./styles.css?ver=6" />
+  <link rel="stylesheet" href="./styles.css?ver=7" />
   <link rel="icon" href="./logo.svg" type="image/svg+xml" />
 </head>
 <body>
@@ -25,7 +22,6 @@
     </div>
 
     <figure class="hero-visual photo framed">
-      <!-- ta photo s’appelle afficher.jpg (à la racine) -->
       <img src="./afficher.jpg" alt="Vitrine de pâtisseries de La Belle Époque" loading="lazy" decoding="async" />
     </figure>
   </header>
@@ -38,20 +34,17 @@
 
   <!-- PRODUITS / GALERIE -->
   <section class="gallery">
-    <!-- chemins corrigés : fichiers à la racine + encodage espaces/accents -->
     <img src="./pains%20en%20panier.jpg" alt="Panier de pains artisanaux" loading="lazy" decoding="async" />
     <img src="./viennoiseries.jpg" alt="Plateau de viennoiseries" loading="lazy" decoding="async" />
     <img src="./g%C3%A2teau%20%C3%A0%20%C3%A9tages.jpg" alt="Gâteau fruits rouges" loading="lazy" decoding="async" />
   </section>
 
   <!-- INFOS PRATIQUES -->
-  <section class="info">
-    <h2>Infos pratiques</h2>
+  <section class="info container">
+    <h2 class="section-title">Infos pratiques</h2>
     <p><strong>Adresse :</strong> 2 Rue des Rougemonts, 93380 Saint-Denis</p>
     <p><strong>Téléphone :</strong> 06 64 37 78 58</p>
-    <p><strong>Horaires :</strong><br>
-      Lun–Ven : 7h–19h · Sam : 7h–18h · Dim : 7h–13h
-    </p>
+    <p><strong>Horaires :</strong> Lun–Ven : 7h–19h · Sam : 7h–18h · Dim : 7h–13h</p>
   </section>
 
   <!-- PIED DE PAGE -->
@@ -62,7 +55,7 @@
         <span>La <strong>Belle Époque</strong></span>
       </a>
       <nav class="footer-nav" aria-label="Liens">
-        <a href="#accueil">Accueil</a>
+        <a href="#top">Accueil</a>
         <a href="#contact">Contact</a>
       </nav>
       <p class="copyright">© <span id="year"></span> La Belle Époque — Tous droits réservés.</p>
