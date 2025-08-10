@@ -1,57 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Belle Époque</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Belle Époque - Boulangerie & Pâtisserie</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Bannière -->
-    <img src="assets/croissant-banner.jpg" alt="Bannière croissants" class="banner">
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#produits">Produits</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>La Belle Époque</h1>
-    </header>
+  <!-- En-tête -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <div class="brand">La Belle Époque</div>
 
-    <!-- Section principale -->
-    <main>
-        <section id="accueil">
-            <h2>Bienvenue à La Belle Époque</h2>
-            <p>Boulangerie & Pâtisserie artisanale — Saint-Denis</p>
-            <button>Nous contacter</button>
-            <button>Voir nos spécialités</button>
-            <ul>
-                <li>Douleurs au levain</li>
-                <li>Viennoiseries pur beurre</li>
-                <li>Pâtisseries de saison</li>
-            </ul>
-        </section>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Ouvrir le menu">☰</button>
+      <nav id="site-nav" class="site-nav" role="navigation" aria-label="Navigation principale">
+        <a href="#top">Accueil</a>
+        <a href="#produits">Produits</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-        <section id="produits">
-            <h2>Nos spécialités</h2>
-            <div class="categories">
-                <button>Fenêtres</button>
-                <button>Pain artisanal</button>
-                <button>Viennoiseries</button>
-                <button>Pâtisserie fine</button>
-            </div>
-        </section>
+  <main id="top" class="container">
+    <!-- Hero -->
+    <section aria-label="Présentation" class="section">
+      <h1 class="display">La Belle Époque</h1>
+      <p class="lead">Boulangerie & Pâtisserie artisanale — Saint-Denis</p>
 
-        <section id="contact">
-            <h2>Contactez-nous</h2>
-            <p>Envoyez-nous un message pour plus d’informations.</p>
-        </section>
-    </main>
+      <div class="actions">
+        <a class="btn btn-primary" href="#contact">Nous contacter</a>
+        <a class="btn btn-ghost" href="#produits">Voir nos spécialités</a>
+      </div>
 
-    <script src="script.js"></script>
+      <ul class="usp">
+        <li>Douleurs au levain</li>
+        <li>Viennoiseries pur beurre</li>
+        <li>Pâtisseries de saison</li>
+      </ul>
+    </section>
+
+    <!-- Produits -->
+    <section id="produits" class="section">
+      <h2 class="section-title">Nos spécialités</h2>
+
+      <div class="cards">
+        <a href="#pain-artisanal" class="card">
+          <h3>Pain artisanal</h3>
+          <p>Cuit au four à bois avec des farines locales.</p>
+        </a>
+
+        <a href="#viennoiseries" class="card">
+          <h3>Viennoiseries</h3>
+          <p>Pur beurre, dorées à souhait, croustillantes et moelleuses.</p>
+        </a>
+
+        <a href="#patisseries-fines" class="card">
+          <h3>Pâtisseries fines</h3>
+          <p>Créations gourmandes et raffinées pour toutes les occasions.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- Infos pratiques -->
+    <section class="section">
+      <h2 class="section-title">Infos pratiques</h2>
+
+      <p><strong>Adresse :</strong> 2 Rue des Rougemonts, 93380 Saint-Denis</p>
+      <p><strong>Téléphone :</strong> 06 64 37 78 58</p>
+
+      <p><strong>Horaires :</strong></p>
+      <ul>
+        <li>Lun – Ven : 7h – 19h</li>
+        <li>Samedi : 7h – 18h</li>
+        <li>Dimanche : 7h – 13h</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Formulaire de contact</h2>
+
+      <form class="form" autocomplete="on">
+        <div class="grid">
+          <label>Nom
+            <input type="text" name="name" required>
+          </label>
+          <label>Email
+            <input type="email" name="email" required>
+          </label>
+          <label>Téléphone
+            <input type="tel" name="phone">
+          </label>
+        </div>
+
+        <label>Message
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Envoyer</button>
+          <span class="status" aria-live="polite"></span>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- Pied de page -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> La Belle Époque — Tous droits réservés</small>
+      <nav class="footer-nav" aria-label="Pied de page">
+        <a href="#top">Accueil</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
