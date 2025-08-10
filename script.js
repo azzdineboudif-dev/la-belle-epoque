@@ -1,49 +1,67 @@
-// script.js — version robuste
+// --- script.js (La Belle Époque) ---
 
-(function () {
-  // Menu mobile (ne s’active que si les éléments existent)
+(() => {
+  // Menu mobile
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('#site-nav');
 
+  const setMenu = (open) => {
+    if (!nav || !navToggle) return;
+    nav.classList.toggle('open', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+  };
+
   if (navToggle && nav) {
-    // état initial
-    navToggle.setAttribute('aria-expanded', 'false');
-    nav.style.display = 'none';
-
-    const setOpen = (open) => {
-      nav.style.display = open ? 'flex' : 'none';
-      navToggle.setAttribute('aria-expanded', String(open));
-    };
-
     navToggle.addEventListener('click', () => {
-      const open = getComputedStyle(nav).display !== 'none';
-      setOpen(!open);
+      const open = !nav.classList.contains('open');
+      setMenu(open);
     });
 
-    // fermer le menu après clic sur un lien interne
+    // Fermer au clic sur un lien
     nav.addEventListener('click', (e) => {
       const a = e.target.closest('a[href^="#"]');
-      if (a) setOpen(false);
+      if (a) setMenu(false);
     });
 
-    // Échap pour fermer
+    // Fermer avec Echap
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') setOpen(false);
+      if (e.key === 'Escape') setMenu(false);
     });
   }
 
-  // Année dynamique dans le footer (si #year existe)
-  const y = document.getElementById('year');
-  if (y) y.textContent = new Date().getFullYear();
+  // Année dynamique
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
   // Défilement fluide pour les ancres internes
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
     const id = a.getAttribute('href').slice(1);
-    const el = document.getElementById(id);
-    if (!el) return;
+    if (!id) return;
+    const target = document.getElementById(id) || document.querySelector(`[name="${id}"]`);
+    if (!target) return;
     e.preventDefault();
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+
+  // Formulaire de contact (simulation locale)
+  const form = document.querySelector('.form');
+  if (form) {
+    const status = form.querySelector('.status');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (status) status.textContent = 'Envoi…';
+      if (submitBtn) submitBtn.disabled = true;
+
+      // Simulation d'un envoi (remplace plus tard par un vrai endpoint si besoin)
+      await new Promise((r) => setTimeout(r, 700));
+
+      if (status) status.textContent = 'Merci ! Votre message a bien été envoyé.';
+      form.reset();
+      if (submitBtn) submitBtn.disabled = false;
+    });
+  }
 })();
