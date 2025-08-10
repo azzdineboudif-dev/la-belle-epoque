@@ -66,23 +66,28 @@ h1:hover, h2:hover, h3:hover {
 }
 .site-nav{display:flex;gap:1rem;align-items:center;color:var(--ink)}
 
-/* Liens & boutons au survol */
+/* Liens & boutons */
 a:hover,
-.btn:hover,
 .site-nav a:hover {
   color: #9E9F8D;
-  border-color: #9E9F8D;
 }
 
-/* Actions */
-.actions{display:flex;gap:.6rem;flex-wrap:wrap;margin:.25rem 0 1rem}
+/* Boutons */
 .btn{
-  display:inline-block;padding:.7rem 1rem;border:1px solid var(--stroke);
-  border-radius:12px;background:#fff;font-weight:600;color:var(--ink);
+  display:inline-block;
+  padding:.7rem 1rem;
+  border:1px solid var(--ink);
+  border-radius:12px;
+  background:#fff;
+  font-weight:600;
+  color:var(--ink);
   transition: all 0.3s ease;
+  cursor:pointer;
 }
-.btn-primary{background:#fff;color:var(--ink)}
-.btn-ghost{background:transparent;color:var(--ink)}
+.btn:hover{
+  background:var(--ink);   /* Fond vert clair */
+  color:#fff;              /* Texte blanc */
+}
 
 /* Puces */
 .usp{margin:0;padding-left:1.2rem;color:var(--ink)}
