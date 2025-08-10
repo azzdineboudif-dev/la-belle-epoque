@@ -1,5 +1,5 @@
 :root {
-  --brand: #F6D3D3; /* Rose framboise adouci */
+  --brand: #F9D9D7; /* Rose clair */
   --sage: #80856D;
   --paper: #ffffff;
   --ink: #1d1b1b;
@@ -25,12 +25,13 @@ a {
   text-decoration: none;
 }
 
-/* Dégradé rose vers blanc sur toute la page */
+/* Dégradé rose clair -> blanc sur toute la page */
 body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--ink);
   background: linear-gradient(to bottom, var(--brand) 0%, #ffffff 100%);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* Layout & typo */
