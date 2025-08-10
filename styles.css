@@ -34,6 +34,11 @@ body {
   min-height: 100vh;
 }
 
+/* Retirer tout fond spécifique des sections */
+section, footer {
+  background: transparent !important;
+}
+
 /* Layout & typo */
 .container {
   width: min(1100px, 92%);
