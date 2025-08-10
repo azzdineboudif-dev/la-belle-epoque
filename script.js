@@ -1,5 +1,5 @@
-// Menu mobile
 (() => {
+  // Menu mobile
   const navToggle = document.querySelector('.nav-toggle');
   const nav = document.querySelector('#site-nav');
 
@@ -26,7 +26,7 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Défilement fluide (ancres internes)
+  // Défilement fluide
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
