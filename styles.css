@@ -64,20 +64,12 @@ h1:hover, h2:hover, h3:hover {
   display:none;border:1px solid var(--stroke);background:#fff;
   padding:.45rem .65rem;border-radius:10px;cursor:pointer
 }
-.site-nav{
-  display:flex;
-  gap:1rem;
-  align-items:center;
-  color:var(--ink);
-}
-.site-nav a {
-  padding: .5rem .8rem;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
+.site-nav{display:flex;gap:1rem;align-items:center;color:var(--ink)}
+
+/* Liens & boutons */
+a:hover,
 .site-nav a:hover {
-  background: var(--ink);   /* Fond vert clair */
-  color: #fff;              /* Texte blanc */
+  color: #9E9F8D;
 }
 
 /* Boutons */
@@ -102,16 +94,33 @@ h1:hover, h2:hover, h3:hover {
 .usp li{margin:.25rem 0;color:var(--ink)}
 
 /* Cartes */
-.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:18px
+}
 .card{
-  background:#fff;border:1px solid var(--stroke);border-radius:var(--radius);
-  padding:1rem;color:var(--ink);
+  background:#fff;
+  border:1px solid var(--stroke);
+  border-radius:var(--radius);
+  padding:1rem;
+  color:var(--ink);
   transition: all 0.3s ease;
+  text-decoration:none; /* enlever soulignement pour lien */
 }
 .card h3{
   margin:.25rem 0 .4rem;
   font-family:"Playfair Display",serif;
   color:var(--ink);
+}
+
+/* Effet hover pour les cartes */
+.card:hover{
+  background:var(--ink); /* fond vert clair */
+  color:#fff; /* texte blanc */
+}
+.card:hover h3{
+  color:#fff; /* titres en blanc au survol */
 }
 
 /* Formulaire */
