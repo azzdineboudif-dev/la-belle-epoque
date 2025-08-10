@@ -1,7 +1,7 @@
 /* Palette neutre + rose transparent */
 :root{
-  --paper:rgba(255, 208, 230, 0.4);  /* Fond rose clair avec transparence */
-  --ink:#9E9F8D;  /* Couleur du texte */
+  --paper:rgba(255, 208, 230, 0.4);
+  --ink:#9E9F8D;
   --muted:#9E9F8D;
   --stroke:#e6e6e6;
   --radius:16px;
@@ -24,11 +24,11 @@ body{
 .section{padding:clamp(32px,5vw,64px) 0}
 
 /* Bannière */
-.banner img{
+.hero-image {
   width: 100%;
-  height: auto;
+  height: 300px; /* Hauteur fixe */
+  object-fit: cover;
   display: block;
-  border-bottom: 1px solid var(--stroke);
 }
 
 /* Titres */
@@ -48,7 +48,7 @@ h1, h2, h3 {
 .display:hover,
 .section-title:hover,
 h1:hover, h2:hover, h3:hover {
-  color:#7f806f; /* Vert plus foncé au survol */
+  color:#7f806f;
 }
 
 /* Header */
@@ -79,8 +79,6 @@ a:hover,
 .site-nav a:hover {
   color: #9E9F8D;
 }
-
-/* Hover vert + texte blanc pour Accueil, Produits, Contact */
 .site-nav a{
   padding:0.5rem 0.8rem;
   border-radius:8px;
